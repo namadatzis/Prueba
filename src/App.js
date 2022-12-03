@@ -3,7 +3,6 @@ import './App.css';
 import Inicio from './components/Inicio'
 import Mercados from './components/Mercados'
 
-
 function App() {
   return (
     <div className="App">
