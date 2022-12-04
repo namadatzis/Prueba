@@ -1,11 +1,18 @@
 import axios from 'axios'
 
 
-const Mercado = async (state) => {
-    
+const todosMercados = async (state) => {
     const endpoint = await axios.get('https://www.buda.com/api/v2/markets')
-    console.log(endpoint.data.markets)
     state(endpoint.data.markets)
 }
 
-export { Mercado } 
+const unicoMercado = async (market_id, state) => {
+    const endpoint = await axios.get(`https://www.buda.com/api/v2/markets/${market_id}`)
+    const detalleMercado = await endpoint.data
+    state(detalleMercado.market)
+}
+
+export { todosMercados,
+    unicoMercado
+}
+

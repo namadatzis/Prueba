@@ -1,7 +1,6 @@
 import React from 'react'
 
-{/* import logo from './logo.svg' */}
-
+{/* import logo from './logo.png' */}
 
 const Inicio = () => {
     return(
@@ -27,12 +26,18 @@ const Inicio = () => {
                 <a
                 className="App-link"
                 href="/markets"
-                target="_blank"
                 rel="noopener noreferrer"
                 >
                 Revisar mercados
                 </a>
 
+                <a
+                className="App-link"
+                href="/stadistics"
+                rel="noopener noreferrer"
+                >
+                Revisar estadísticas
+                </a>
 
             </header>
         </div>
