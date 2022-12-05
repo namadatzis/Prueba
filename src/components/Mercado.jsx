@@ -7,6 +7,9 @@ const Mercado = () => {
 
     const [market, setMarket] = useState(null)
     const params = useParams()
+    console.log("Mercado:")
+    console.log(market)
+    
     
     useEffect(() => {
         unicoMercado(params.market_id, setMarket)
@@ -18,13 +21,38 @@ const Mercado = () => {
             <div>
                 <h1> Mercado: {params.market_id} </h1>
                 <h3> Datos: </h3>
-                <li> Nombre: {market.name} </li>
-                <li> Moneda de cambio: {market.base_currency} </li>
-                <li> Moneda de pago: {market.quote_currency} </li>
-                <li> Tamaño de orden mínimo aceptado: {market.minimun_order_amount} </li>
-                <li> Tarifa pagada por una orden taker: {market.taker_fee} </li>
-                <li> Tarifa pagada por una orden maker: {market.makes_fee} </li>
 
+                
+                {market.minimum_order_amount.map(minOrder => (
+                    <table>
+                        <tr> 
+                            <td>Nombre: </td>
+                            <td>{market.name}</td>
+                        </tr>
+                        <tr> 
+                            <td>Moneda de cambio:</td>
+                            <td>{market.base_currency}</td>
+                        </tr>
+                        <tr> 
+                            <td>Moneda de pago:</td>
+                            <td>{market.quote_currency}</td>
+                        </tr>
+                        <tr> 
+                            <td>Tamaño de orden mínimo aceptado:</td> 
+                            <td>{minOrder[0]}</td>
+                        </tr>
+                        <tr> 
+                            <td>Tarifa pagada por una orden taker:</td>
+                            <td>{market.taker_fee}</td>
+                        </tr>
+                        <tr> 
+                            <td>Tarifa pagada por una orden maker:</td>
+                            <td>{market.maker_fee}</td>
+                        </tr>
+                    </table>
+                ))}
+
+                
                 <a
                     className="App-link"
                     href="/"
