@@ -6,13 +6,11 @@ import { unicoMercado } from '../funciones/funciones'
 const Mercado = () => {
 
     const [market, setMarket] = useState(null)
+    const params = useParams()
     
     useEffect(() => {
         unicoMercado(params.market_id, setMarket)
     }, [])
-
-    const params = useParams()
-    console.log(market)
 
     return(
         <>
@@ -26,13 +24,23 @@ const Mercado = () => {
                 <li> Tamaño de orden mínimo aceptado: {market.minimun_order_amount} </li>
                 <li> Tarifa pagada por una orden taker: {market.taker_fee} </li>
                 <li> Tarifa pagada por una orden maker: {market.makes_fee} </li>
-        
+
                 <a
                     className="App-link"
                     href="/"
                     rel="noopener noreferrer"
                     >
                     Volver al inicio
+                </a>
+
+                <p></p>
+
+                <a
+                    className="App-link"
+                    href={`/markets/${params.market_id}/trades`}
+                    rel="noopener noreferrer"
+                    >
+                    Ver transacciones
                 </a>
             </div>
         ) : ("No hay detalle del mercado seleccionado")}
