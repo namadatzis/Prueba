@@ -111,7 +111,6 @@ react-router-dom
 
 Dentro de cada mercado poder observar las transacciones de las últimas 24 horas y resltando la de mayor valor --> indicar si es compra o venta
 
-En estadísticas mostrar una tabla con sólo la transacción de mayor valor por mercado
 
 
 npm install moment --save

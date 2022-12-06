@@ -1,18 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { todosMercados } from  '../funciones/funciones'
 
-
 const Mercados = () => {
-
     const [markets, setMarkets] = useState(null)
-    console.log("Markets:")
-    console.log(markets)
-
 
     useEffect(() => {
         todosMercados(setMarkets)
     },[])
-
     return(
         <>
         <h1> Mercados disponibles en Buda.com </h1>
@@ -23,11 +17,9 @@ const Mercados = () => {
                 </div>
                 ))
             ) : ('No hay mercados disponibles')}
-
         <div>
             <a href={"/"} className="App-link"> Volver al inicio </a>
-        </div>
-        
+        </div>  
         </>
     )
 }

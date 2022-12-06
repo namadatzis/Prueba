@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { todasTransacciones, mayorTransaccion } from '../funciones/funciones'
+import { todasTransacciones, verTransaccion } from '../funciones/funciones'
 
 const Trades = () => {
-
     const [trades, setTrades] = useState(null)
+    const [trade, setTrade] = useState(null)
     const params = useParams()
 
     useEffect(() => {
         todasTransacciones(params.market_id, setTrades)
     }, [])
+
+    useEffect(() => {
+        verTransaccion(trades, setTrade)
+    })
 
     //Timestamp actual
     const now = new Date()  
@@ -17,21 +21,22 @@ const Trades = () => {
     const utcSegundos = Math.round(utcMiliSegundos / 1000)  
     const timestamp = utcSegundos - 60 * 60 * 24
 
-
     //Obteniendo la fecha desde timestamp
     const verDetalle = (trade) => {
-        console.log(typeof(trade))
-        const timeTrade = new Date((trade * 60 )/ 1000)
+        console.log("verDetalle:")
+        console.log(trade)
+        const timeTrade = new Date(trade * 1000)
         const tTrade = timeTrade.getFullYear()
         console.log(tTrade)
         console.log(timeTrade)        
         return(timeTrade)
     }
 
+    verDetalle(trade)
+
     return(
         <>
         <h1> Trades: {params.market_id}</h1>
-        
         <table>
             <tr>
                 <td>Mayor transacción</td>
@@ -44,7 +49,6 @@ const Trades = () => {
                 <td> XXXX </td>
             </tr>
         </table>
-
         <p></p>
         <a
             className="App-link"
@@ -88,7 +92,6 @@ const Trades = () => {
                 </h3>
             </div>
         )}
-        
         </>
     )
 }

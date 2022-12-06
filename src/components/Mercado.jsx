@@ -2,15 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { unicoMercado } from '../funciones/funciones'
 
-
 const Mercado = () => {
-
     const [market, setMarket] = useState(null)
     const params = useParams()
-    console.log("Mercado:")
-    console.log(market)
-    
-    
+
     useEffect(() => {
         unicoMercado(params.market_id, setMarket)
     }, [])
@@ -20,7 +15,6 @@ const Mercado = () => {
         { market != null ? (
             <div>
                 <h1> Mercado: {params.market_id} </h1>
-                
                     <table>
                         <tr> 
                             <td>Nombre: </td>
@@ -47,7 +41,6 @@ const Mercado = () => {
                             <td>{market.maker_fee}</td>
                         </tr>
                     </table>
-                
                 <a
                     className="App-link"
                     href="/"
@@ -55,9 +48,7 @@ const Mercado = () => {
                     >
                     Volver al inicio
                 </a>
-
                 <p></p>
-
                 <a
                     className="App-link"
                     href={`/markets/${params.market_id}/trades`}
