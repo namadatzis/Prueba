@@ -37,3 +37,14 @@
   }
 }
 
+table {
+  width: 100%;
+  border: 1px solid #000;
+}
+tr, td {
+  width: 25%;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid rgb(87, 87, 87);
+  border-collapse: collapse;
+}

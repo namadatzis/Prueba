@@ -20,10 +20,7 @@ const Mercado = () => {
         { market != null ? (
             <div>
                 <h1> Mercado: {params.market_id} </h1>
-                <h3> Datos: </h3>
-
                 
-                {market.minimum_order_amount.map(minOrder => (
                     <table>
                         <tr> 
                             <td>Nombre: </td>
@@ -39,7 +36,7 @@ const Mercado = () => {
                         </tr>
                         <tr> 
                             <td>Tamaño de orden mínimo aceptado:</td> 
-                            <td>{minOrder[0]}</td>
+                            <td>{market.minimum_order_amount.map(minOrder => (minOrder[0]))}</td>
                         </tr>
                         <tr> 
                             <td>Tarifa pagada por una orden taker:</td>
@@ -50,8 +47,6 @@ const Mercado = () => {
                             <td>{market.maker_fee}</td>
                         </tr>
                     </table>
-                ))}
-
                 
                 <a
                     className="App-link"

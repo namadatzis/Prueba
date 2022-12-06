@@ -31,6 +31,21 @@ const Trades = () => {
     return(
         <>
         <h1> Trades: {params.market_id}</h1>
+        
+        <table>
+            <tr>
+                <td>Mayor transacción</td>
+                <td>Valor</td>
+                <td>Tipo</td>
+            </tr>
+            <tr>
+                <td> XXXX </td>
+                <td> XXXX </td>
+                <td> XXXX </td>
+            </tr>
+        </table>
+
+        <p></p>
         <a
             className="App-link"
             href="/"
@@ -38,6 +53,7 @@ const Trades = () => {
             >
             Volver al inicio
         </a>
+        <p></p>
         {trades != null ? (
             <div>
                 <table>

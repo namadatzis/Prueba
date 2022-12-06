@@ -1,0 +1,74 @@
+Arguments: 
+  /Users/namadatzis/.nvm/versions/node/v16.18.0/bin/node /Users/namadatzis/.nvm/versions/node/v16.18.0/bin/yarn start
+
+PATH: 
+  /Users/namadatzis/.rvm/gems/ruby-2.6.8/bin:/Users/namadatzis/.rvm/gems/ruby-2.6.8@global/bin:/Users/namadatzis/.rvm/rubies/ruby-2.6.8/bin:/Users/namadatzis/.nvm/versions/node/v16.18.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/namadatzis/.rvm/gems/ruby-2.6.8/bin:/Users/namadatzis/.rvm/gems/ruby-2.6.8@global/bin:/Users/namadatzis/.rvm/rubies/ruby-2.6.8/bin:/Users/namadatzis/.nvm/versions/node/v16.18.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/namadatzis/.rvm/bin:/Users/namadatzis/.rvm/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.18.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  SyntaxError: /Users/namadatzis/Documents/Proyecto Web/nomad/Nomad/package.json: Unexpected token } in JSON at position 651
+      at JSON.parse (<anonymous>)
+      at /Users/namadatzis/.nvm/versions/node/v16.18.0/lib/node_modules/yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/Users/namadatzis/.nvm/versions/node/v16.18.0/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /Users/namadatzis/.nvm/versions/node/v16.18.0/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "nomad",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "@testing-library/jest-dom": "^5.16.5",
+      "@testing-library/react": "^13.4.0",
+      "@testing-library/user-event": "^13.5.0",
+      "axios": "^1.2.0",
+      "cors": "^2.8.5",
+      "http-proxy-middleware": "^2.0.6",
+      "koa": "^2.13.4",
+      "moment": "^2.29.4",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-router-dom": "^6.4.4",
+      "react-scripts": "5.0.1",
+      "web-vitals": "^2.1.4"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject",
+    },
+    "eslintConfig": {
+      "extends": [
+        "react-app",
+        "react-app/jest"
+      ]
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
